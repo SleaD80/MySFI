@@ -27,9 +27,9 @@ public class Main {
             driver.get("https://sfi.ru/science/nauchnyj-zhurnal/vypusk-4-dekabr-2011@user-slead80gmailcom;language=ru.html");
 
             WebElement elUsername = driver.findElement(By.id("username"));
-            elUsername.sendKeys("slead80@gmail.com");
+            elUsername.sendKeys("xxx");
             WebElement elPassword = driver.findElement(By.id("password"));
-            elPassword.sendKeys("pRUma6As");
+            elPassword.sendKeys("xxx");
             elPassword.submit();
 
             handleIssue();
@@ -50,7 +50,6 @@ public class Main {
             int i = text.indexOf(keywords);
             CharSequence anText = text.substring(0, i).trim();
             WebElement anEl = annotation.findElement(By.xpath(".//span"));
-            Thread.sleep(3000);
             anEl.clear();
             anEl.sendKeys(anText);
             CharSequence kwText = text.substring(i +15).trim();
